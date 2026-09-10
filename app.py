@@ -91,7 +91,7 @@ def load_components(api_key):
     embeddings = GoogleGenerativeAIEmbeddings(model="gemini-embedding-001")
     db = FAISS.load_local(VECTORSTORE_DIR, embeddings, allow_dangerous_deserialization=True)
     retriever = db.as_retriever(search_kwargs={"k": 3})
-    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.7, stream=True)
+    llm = ChatGoogleGenerativeAI(model="gemini-3.6-flash", temperature=0.7, stream=True)
     return llm, retriever
 
 # --- MAIN APP INTERFACE ---
