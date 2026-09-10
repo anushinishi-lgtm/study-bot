@@ -1,0 +1,20 @@
+# Secrets and local user data
+.env
+profile.json
+
+# Python environments and generated files
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Locally generated document index
+vectorstore/
+
+# Java build output and editor files
+*.class
+.vscode/
+
+# Temporary files
+tempCodeRunnerFile.java
