@@ -113,7 +113,7 @@ with st.sidebar:
             elif not google_api_key: st.error("Please enter your Google API Key.")
             else:
                 with st.spinner("Embedding documents..."):
-                    os.environ["GOOGLE_API_KEY"] = api_key
+                    os.environ["GOOGLE_API_KEY"] = google_api_key
                     embeddings = GoogleGenerativeAIEmbeddings(model="gemini-embedding-001")
                     process_and_store_documents(uploaded_files, embeddings)
                     st.cache_resource.clear()
